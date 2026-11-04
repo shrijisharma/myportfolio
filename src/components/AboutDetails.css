@@ -1,0 +1,163 @@
+
+.about-details {
+  width: 100%;
+  margin-top: 28px;
+  color: #F4F7FF;
+}
+
+.about-intro {
+  padding: 28px;
+  margin-bottom: 35px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #182338, #101a2d);
+  border: 1px solid rgba(91, 156, 255, 0.2);
+}
+
+.about-label {
+  color: #59DCEB;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+.about-intro h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.about-intro h3 {
+  color: #5B9CFF;
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+.about-intro > p:last-child,
+.about-section p {
+  color: #AAB6CA;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.about-section {
+  margin-bottom: 38px;
+}
+
+.about-section > h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.about-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 12px;
+  background: #182338;
+  border: 1px solid rgba(244, 247, 255, 0.08);
+  border-radius: 12px;
+}
+
+.about-item h4,
+.about-mini-card h4,
+.timeline-item h4 {
+  font-size: 15px;
+  margin-bottom: 7px;
+  color: #F4F7FF;
+}
+
+.about-highlight {
+  flex-shrink: 0;
+  color: #59DCEB;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.about-list {
+  padding-left: 22px;
+}
+
+.about-list li {
+  color: #AAB6CA;
+  font-size: 14px;
+  line-height: 2;
+  padding-left: 5px;
+}
+
+.about-list li::marker {
+  color: #59DCEB;
+}
+
+.about-projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.about-mini-card {
+  padding: 18px;
+  background: #182338;
+  border: 1px solid rgba(244, 247, 255, 0.08);
+  border-radius: 12px;
+}
+
+.about-mini-card p {
+  font-size: 12px;
+}
+
+.about-timeline {
+  border-left: 1px solid rgba(91, 156, 255, 0.4);
+  margin-left: 10px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 18px;
+  padding: 0 0 25px 20px;
+  position: relative;
+}
+
+.timeline-item > span {
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #182338;
+  border: 1px solid #5B9CFF;
+  color: #59DCEB;
+  font-size: 9px;
+}
+
+.timeline-item > div {
+  padding-left: 12px;
+}
+
+.timeline-item p {
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .about-intro {
+    padding: 20px;
+  }
+
+  .about-intro h2 {
+    font-size: 26px;
+  }
+
+  .about-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .about-item {
+    align-items: flex-start;
+  }
+}

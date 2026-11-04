@@ -1,0 +1,520 @@
+
+
+/* ==============================
+   BENTO SECTION
+============================== */
+
+.bento-section {
+  min-height: 100vh;
+  padding: 90px 9%;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(ellipse at 85% 10%, #19365b44, transparent 35%),
+    #0B1020;
+
+  color: #F4F7FF;
+  font-family: "Inter", sans-serif;
+}
+
+
+/* ==============================
+   HEADING
+============================== */
+
+.bento-heading {
+  margin-bottom: 50px;
+}
+
+.bento-heading > p {
+  color: #59DCEB;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.bento-heading h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 700;
+}
+
+.bento-heading h2 span {
+  color: #5B9CFF;
+}
+
+
+/* ==============================
+   GRID LAYOUT
+============================== */
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(190px, auto);
+  gap: 18px;
+}
+
+
+/* ==============================
+   COMMON CARD
+============================== */
+
+.bento-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  min-width: 0;
+  padding: 26px;
+  overflow: hidden;
+  isolation: isolate;
+
+  text-align: left;
+  color: #F4F7FF;
+
+  background:
+    radial-gradient(ellipse at 80% 100%, #0879ff55, transparent 55%),
+    linear-gradient(145deg, #102653, #071735);
+
+  border: 1px solid #2675D9;
+  border-radius: 18px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  border-color: #38BDF8;
+
+  box-shadow:
+    0 0 15px #0879ff30,
+    0 15px 40px #00000050;
+}
+
+
+/* ==============================
+   CARD TEXT
+============================== */
+
+.bento-number {
+  position: relative;
+  z-index: 2;
+
+  color: #59DCEB;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+}
+
+.bento-subtitle {
+  color: #8FA5C4;
+  font-size: 12px;
+  margin-bottom: 9px;
+}
+
+.bento-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.bento-description {
+  color: #AAB7CC;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.bento-card-content {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+}
+
+
+/* About and Projects text width */
+
+.bento-about .bento-card-content,
+.bento-projects .bento-card-content {
+  max-width: 62%;
+}
+
+
+/* ==============================
+   SVG BACKGROUND
+============================== */
+
+.card-svg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* ==============================
+   CARD ARROW
+============================== */
+
+.bento-arrow {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+
+  color: #59DCEB;
+  font-size: 22px;
+
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.bento-card:hover .bento-arrow {
+  transform: translate(4px, -4px);
+}
+
+
+/* ==============================
+   DIFFERENT CARD SIZES
+   EXISTING SIZES PRESERVED
+============================== */
+
+.bento-about {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 350px;
+}
+
+.bento-education {
+  grid-column: span 2;
+}
+
+.bento-skills {
+  grid-column: span 2;
+}
+
+.bento-projects {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 350px;
+}
+
+.bento-journey {
+  grid-column: span 2;
+}
+
+.bento-contact {
+  grid-column: span 2;
+}
+
+
+/* ==============================
+   MODAL BACKGROUND
+============================== */
+
+.bento-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: #050914dd;
+  backdrop-filter: blur(10px);
+}
+
+
+/* ==============================
+   MODAL CONTENT
+============================== */
+
+.bento-modal-content {
+  width: 100%;
+  max-width: 650px;
+  max-height: 85vh;
+
+  overflow-y: auto;
+  padding: 45px;
+
+  position: relative;
+
+  border: 1px solid #5B9CFF66;
+  border-radius: 14px;
+
+  background: linear-gradient(145deg, #182338, #0f192b);
+
+  box-shadow: 0 20px 70px #00000070;
+}
+
+.modal-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 45px;
+  padding: 9px 14px;
+
+  color: #59DCEB;
+  background: transparent;
+
+  border: 1px solid #59DCEB66;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: #59DCEB15;
+}
+
+.bento-modal-content h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 38px;
+  margin: 12px 0 20px;
+}
+
+.modal-details {
+  color: #B6C4D8;
+  font-size: 15px;
+  line-height: 2;
+  white-space: pre-line;
+}
+
+
+/* ==============================
+   PROJECT CARDS
+============================== */
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.project-item {
+  padding: 24px;
+
+  background: #182338;
+  border: 1px solid rgba(244, 247, 255, 0.1);
+  border-radius: 16px;
+
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  border-color: #5B9CFF;
+}
+
+.project-category {
+  color: #59DCEB;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.project-item h3 {
+  color: #F4F7FF;
+  font-size: 21px;
+  margin: 12px 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.project-item p {
+  color: #AAB7CC;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.project-status {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 10px;
+
+  border-radius: 20px;
+  background: #59DCEB18;
+  color: #59DCEB;
+  font-size: 12px;
+}
+
+
+/* ==============================
+   SKILLS SECTION
+============================== */
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.skill-group {
+  padding: 22px;
+
+  background: #182338;
+  border: 1px solid rgba(244, 247, 255, 0.1);
+  border-radius: 16px;
+}
+
+.skill-group h3 {
+  color: #F4F7FF;
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.skill-badge {
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(91, 156, 255, 0.12);
+  border: 1px solid rgba(91, 156, 255, 0.2);
+
+  color: #AFCFFF;
+  font-size: 13px;
+}
+
+
+/* ==============================
+   CONTACT SECTION
+============================== */
+
+.contact-container {
+  margin-top: 25px;
+  max-width: 600px;
+}
+
+.contact-intro {
+  color: #AAB6CA;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 20px;
+  margin-bottom: 12px;
+
+  background: #182338;
+  border: 1px solid rgba(244, 247, 255, 0.1);
+  border-radius: 12px;
+
+  color: #F4F7FF;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.contact-link:hover {
+  border-color: #5B9CFF;
+  transform: translateX(5px);
+  color: #59DCEB;
+}
+
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+  .bento-section {
+    padding: 75px 6%;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bento-about,
+  .bento-projects {
+    min-height: 300px;
+  }
+
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 600px) {
+
+  .bento-section {
+    padding: 65px 6%;
+  }
+
+  .bento-heading {
+    margin-bottom: 30px;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 14px;
+  }
+
+  .bento-card,
+  .bento-about,
+  .bento-education,
+  .bento-skills,
+  .bento-projects,
+  .bento-journey,
+  .bento-contact {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 190px;
+  }
+
+  .bento-about,
+  .bento-projects {
+    min-height: 230px;
+  }
+
+  .bento-about .bento-card-content,
+  .bento-projects .bento-card-content {
+    max-width: 75%;
+  }
+
+  .bento-modal-content {
+    padding: 28px 22px;
+  }
+
+  .bento-modal-content h2 {
+    font-size: 30px;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+}
