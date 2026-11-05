@@ -24,7 +24,7 @@ const projects = [
       "MongoDB",
       "Jest",
     ],
-    github: "https://github.com/YOUR_USERNAME/zerodha-clone",
+    github: "https://github.com/shrijisharma/zerodha",
     live: "https://YOUR_DEPLOYED_URL",
   },
 
@@ -328,40 +328,36 @@ function BentoGrid() {
       {/* BENTO CARDS */}
       <div className="bento-grid">
 
-        {sections.map((item) => (
-          <button
-            className={`bento-card bento-${item.id}`}
-            key={item.id}
-            onClick={() => setSelected(item)}
-          >
+       {sections.map((item) => (
+  <button
+    className={`bento-card bento-${item.id}`}
+    key={item.id}
+    onClick={() => setSelected(item)}
+  >
+    {/* SVG BACKGROUND */}
+    {item.id === "about" && (
+      <img src="/about.svg" className="card-svg" alt="" />
+    )}
 
-            <span className="bento-number">
-              {item.number}
-            </span>
+    {item.id === "projects" && (
+      <img src="/project.svg" className="card-svg" alt="" />
+    )}
 
-            <div className="bento-card-content">
-  <p className="bento-subtitle">
-    {item.subtitle}
-  </p>
+    {/* CARD NUMBER */}
+    <span className="bento-number">
+      {item.number}
+    </span>
 
-  <h3>{item.title}</h3>
+    {/* CARD CONTENT */}
+    <div className="bento-card-content">
+      <p className="bento-subtitle">{item.subtitle}</p>
+      <h3>{item.title}</h3>
+      <p className="bento-description">{item.description}</p>
+    </div>
 
-  <p className="bento-description">
-    {item.description}
-  </p>
-</div>
-{item.id === "about" && (
-  <img src="/about.svg" className="card-svg" alt="" />
-)}
-
-{item.id === "projects" && (
-  <img src="/project.svg" className="card-svg" alt="" />
-)}
-
-            <span className="bento-arrow">↗</span>
-
-          </button>
-        ))}
+    <span className="bento-arrow">↗</span>
+  </button>
+))}
 
       </div>
 
