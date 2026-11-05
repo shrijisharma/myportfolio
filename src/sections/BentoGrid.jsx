@@ -13,7 +13,7 @@ const projects = [
     category: "Stock Trading & Investment Platform",
     description:
       "A Zerodha-inspired stock trading and investment platform featuring user authentication and authorization, interactive graphs and charts, and a MongoDB-powered backend. Tested using Jest.",
-    status: "Runs Locally",
+    status: "Deployed on AWS",
     image: "zerodha.jpeg",
     technologies: [
       "React",
@@ -22,10 +22,13 @@ const projects = [
       "Node.js",
       "Express.js",
       "MongoDB",
+      "AWS Amplify",
+      "AWS EC2",
       "Jest",
     ],
     github: "https://github.com/shrijisharma/zerodha",
-    live: "https://YOUR_DEPLOYED_URL",
+    frontend: "https://main.d1q0br93zs3fw6.amplifyapp.com",
+    dashboard:"https://main.d3ico3zruf0fwv.amplifyapp.com"
   },
 
   {
@@ -296,6 +299,16 @@ function BentoGrid() {
             <span>GitHub</span>
             <span>↗</span>
           </a>
+
+          <a
+            className="contact-link"
+  href="https://wa.me/919897672373"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span>Whatsapp</span>
+            <span>↗</span>
+</a>
 
         </div>
       );

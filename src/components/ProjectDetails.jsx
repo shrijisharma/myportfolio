@@ -66,10 +66,28 @@ function ProjectDetails({ project, onBack }) {
       Backend Repository ↗
     </a>
   )}
+    {project.frontend && (
+    <a
+      href={project.frontend}
+      target="_blank"
+      rel="noreferrer"
+    >
+      Frontend Link↗
+    </a>
+  )}
+    {project.dashboard && (
+    <a
+      href={project.dashboard}
+      target="_blank"
+      rel="noreferrer"
+    >
+      Dashboard Link↗
+    </a>
+  )}
 
     {project.github&& (
     <a
-      href={project.live}
+      href={project.github}
       target="_blank"
       rel="noreferrer"
     >
