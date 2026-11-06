@@ -8,7 +8,7 @@ function AboutDetails() {
       {/* Introduction */}
       <div className="about-intro">
         <p className="about-label">WHO I AM</p>
-        <h2>Hey, I'm Shri.</h2>
+        <h2>Hey, I'm Shriji.</h2>
         <h3>Full-Stack MERN Developer</h3>
 
         <p>
@@ -48,6 +48,7 @@ function AboutDetails() {
             <p>Hajarimal Somani Nagar Nigam Inter College</p>
             <p>UP Board | 2022</p>
           </div>
+              <span className="about-highlight">78%</span>
         </div>
       </div>
 
