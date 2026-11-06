@@ -1,10 +1,8 @@
-
 import "./AboutDetails.css";
 
 function AboutDetails() {
   return (
     <div className="about-details">
-
       {/* Introduction */}
       <div className="about-intro">
         <p className="about-label">WHO I AM</p>
@@ -12,10 +10,9 @@ function AboutDetails() {
         <h3>Full-Stack MERN Developer</h3>
 
         <p>
-          I'm a BCA student with a strong interest in full-stack
-          web development. I enjoy building web applications,
-          solving programming problems and continuously learning
-          new technologies.
+          I'm a BCA student with a strong interest in full-stack web
+          development. I enjoy building web applications, solving programming
+          problems and continuously learning new technologies.
         </p>
       </div>
 
@@ -48,7 +45,7 @@ function AboutDetails() {
             <p>Hajarimal Somani Nagar Nigam Inter College</p>
             <p>UP Board | 2022</p>
           </div>
-              <span className="about-highlight">78%</span>
+          <span className="about-highlight">78%</span>
         </div>
       </div>
 
@@ -122,7 +119,9 @@ function AboutDetails() {
             <span>02</span>
             <div>
               <h4>Java and DSA</h4>
-              <p>Developed problem-solving skills through Java and DSA practice.</p>
+              <p>
+                Developed problem-solving skills through Java and DSA practice.
+              </p>
             </div>
           </div>
 
@@ -130,7 +129,9 @@ function AboutDetails() {
             <span>03</span>
             <div>
               <h4>Full-Stack Development</h4>
-              <p>Learned frontend and backend development with the MERN stack.</p>
+              <p>
+                Learned frontend and backend development with the MERN stack.
+              </p>
             </div>
           </div>
 
@@ -138,12 +139,14 @@ function AboutDetails() {
             <span>04</span>
             <div>
               <h4>Building and Deploying Projects</h4>
-              <p>Applied my learning through projects and explored AWS deployment.</p>
+              <p>
+                Applied my learning through projects and explored AWS
+                deployment.
+              </p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 }
